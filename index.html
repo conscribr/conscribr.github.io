@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    conscribr - the best way to hire tech talent
+  </title>
+  <meta name="description" content="Best way to hire and recruit tech talent with smart job and candidate matching techniques, free resume service for developers, combined talent pool for companies to use" />
+  <meta name="keywords" content="hiring, recruitment, hire, recruit, tech jobs, job search, tech talent, java dev, developers, devs, ruby dev, ruby developers, python development, web development, devops hiring, resume service, resume builder" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <!--Replace with your tailwind.css once created-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+  <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+  <style>
+  .gradient {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  }
+  </style>
+</head>
+
+<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <!--Nav-->
+  <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+      <div class="pl-4 flex items-center">
+        <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+          conscribr
+        </a>
+      </div>
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="mr-3">
+            <a class="inline-block py-2 px-4 text-black no-underline" href="#">Recruiters</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Resume Builder</a>
+          </li>
+          <li class="mr-3">
+            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">Job Openings</a>
+          </li>
+        </ul>
+        <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          Login / Register
+        </button>
+      </div>
+    </div>
+    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+  </nav>
+  <!--Hero-->
+  <div class="pt-24">
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <!--Left Col-->
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <p class="uppercase tracking-loose w-full">Looking to hire the best tech talent?</p>
+        <h1 class="my-4 text-5xl font-bold leading-tight">
+          HIRE or GET HIRED!
+        </h1>
+        <p class="leading-normal text-2xl mb-8">
+          The best way to hire the Top Tech Talent!
+        </p>
+        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          Create Account
+        </button>
+      </div>
+      <!--Right Col-->
+      <div class="w-full md:w-3/5 py-6 text-center">
+        <img class="w-full md:w-4/5 z-50" src="hero.png" />
+      </div>
+    </div>
+  </div>
+  <div class="relative -mt-12 lg:-mt-24">
+    <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+          <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+          <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" id="Path-4" opacity="0.200000003"></path>
+        </g>
+        <g transform="translate(-4.000000, 76.000000)" fill="#FFFFFF" fill-rule="nonzero">
+          <path d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"></path>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <section class="bg-white border-b py-8">
+    <div class="container max-w-5xl mx-auto m-8">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        The no effort platform
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="w-5/6 sm:w-1/2 p-6">
+          <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            Take your Resume 
+          </h3>
+          <p class="text-gray-600 mb-8">
+            As a candidate, your sole job is to create your account, upload your resume & answer a few questions about the experience you have, and the only thing you need to do after that is, sit back & relax.
+          </p>
+        </div>
+        <div class="w-full sm:w-1/2 p-6">
+          <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="225" height="210" viewBox="0 0 753.87469 703.82827" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M578.47505,103.95771l-23.06843,12.58664L271.19846,271.61447,248.13,284.2011a48.1793,48.1793,0,0,0-19.1955,65.29607L440.57765,737.39072a48.17922,48.17922,0,0,0,65.296,19.19561l.05958-.03251L836.15907,576.37545l.05958-.03251a48.17924,48.17924,0,0,0,19.19553-65.296L643.77106,123.15338A48.17929,48.17929,0,0,0,578.47505,103.95771Z" transform="translate(-223.06266 -98.08587)" fill="#f2f2f2" />
+            <path d="M585.11115,116.11916l-27.323,14.908L282.08828,281.455,254.7657,296.36278a34.30947,34.30947,0,0,0-13.66965,46.4988L452.73916,730.75513a34.30947,34.30947,0,0,0,46.4988,13.66952l.05958-.0325L829.5234,564.21377l.06-.03274a34.30935,34.30935,0,0,0,13.66926-46.49851L631.60954,129.789A34.30936,34.30936,0,0,0,585.11115,116.11916Z" transform="translate(-223.06266 -98.08587)" fill="#fff" />
+            <path d="M589.66653,236.52147,466.505,303.72109a8.01411,8.01411,0,1,1-7.677-14.07012l123.16157-67.19962a8.01411,8.01411,0,1,1,7.677,14.07012Z" transform="translate(-223.06266 -98.08587)" fill="#f2f2f2" />
+            <path d="M631.641,244.43106,479.45984,327.46442a8.01411,8.01411,0,0,1-7.677-14.07012l152.18119-83.03336a8.01411,8.01411,0,1,1,7.677,14.07012Z" transform="translate(-223.06266 -98.08587)" fill="#f2f2f2" />
+            <path d="M415.87223,275.74837l-113.5479,61.95419a3.84082,3.84082,0,0,0-1.53151,5.21006L349.14436,431.53a3.84075,3.84075,0,0,0,5.21,1.5317l113.5479-61.95419a3.84075,3.84075,0,0,0,1.53153-5.21l-48.35154-88.61735A3.84081,3.84081,0,0,0,415.87223,275.74837Z" transform="translate(-223.06266 -98.08587)" fill="#f2f2f2" />
+            <path d="M650.7763,348.96263,483.723,440.11051a8.01411,8.01411,0,1,1-7.677-14.07012l167.05327-91.14788a8.01411,8.01411,0,1,1,7.677,14.07012Z" transform="translate(-223.06266 -98.08587)" fill="#f2f2f2" />
+            <path d="M692.7508,356.87223,496.67791,463.85384a8.01411,8.01411,0,0,1-7.677-14.07012L685.07384,342.80211a8.01411,8.01411,0,1,1,7.677,14.07012Z" transform="translate(-223.06266 -98.08587)" fill="#f2f2f2" />
+            <circle cx="197.03853" cy="382.67177" r="34" fill="#f2f2f2" />
+            <path d="M928.81234,263.78816H552.494a48.17927,48.17927,0,0,0-48.125,48.12512V753.78907a48.17922,48.17922,0,0,0,48.125,48.12506H928.81234a48.17922,48.17922,0,0,0,48.125-48.12506V311.91328A48.17927,48.17927,0,0,0,928.81234,263.78816Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <path d="M928.81283,277.64235H552.494a34.30947,34.30947,0,0,0-34.271,34.27093V753.78907A34.30947,34.30947,0,0,0,552.494,788.06H928.81283a34.30936,34.30936,0,0,0,34.27051-34.27088V311.91328A34.30937,34.30937,0,0,0,928.81283,277.64235Z" transform="translate(-223.06266 -98.08587)" fill="#fff" />
+            <path d="M875.14319,385.51745H734.84151a8.01411,8.01411,0,0,1,0-16.02823H875.14319a8.01412,8.01412,0,1,1,0,16.02823Z" transform="translate(-223.06266 -98.08587)" fill="#d53369" />
+            <path d="M908.20141,412.56508H734.84151a8.01411,8.01411,0,1,1,0-16.02822h173.3599a8.01411,8.01411,0,0,1,0,16.02822Z" transform="translate(-223.06266 -98.08587)" fill="#d53369" />
+            <path d="M703.79234,336.71073H574.44224a3.8408,3.8408,0,0,0-3.83984,3.84v100.95a3.84075,3.84075,0,0,0,3.83984,3.84h129.3501a3.84076,3.84076,0,0,0,3.83984-3.84v-100.95A3.84081,3.84081,0,0,0,703.79234,336.71073Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <path d="M609.92406,398.70111a34.087,34.087,0,0,1-8.804,23.076c-5.656,6.20712-14.07618,10.3236-22.57327,8.62043-7.82416-1.56829-14.18219-8.4067-13.389-16.6795a12.356,12.356,0,0,1,15.2668-11.09515c7.43265,1.92885,10.39415,12.64095,4.20051,17.669-1.4862,1.2065-3.62136-.90359-2.12132-2.12132,4.0944-3.32385,2.8295-10.5954-2.11244-12.419-5.75371-2.12311-11.84978,2.44324-12.26355,8.32554-.49057,6.97428,4.85221,12.22646,11.40422,13.463,7.08789,1.3377,14.11532-2.29,18.91808-7.29718a30.95507,30.95507,0,0,0,8.474-21.54183,1.5009,1.5009,0,0,1,3,0Z" transform="translate(-223.06266 -98.08587)" fill="#2f2e41" />
+            <circle cx="416.15529" cy="266.1673" r="53.51916" fill="#d53369" />
+            <path d="M636.47981,387.08916l-.05566-2c3.7207-.10352,7.001-.33692,9.46582-2.1377a6.14794,6.14794,0,0,0,2.38134-4.52832,3.51432,3.51432,0,0,0-1.15283-2.89453c-1.63623-1.38184-4.269-.93457-6.188-.05469l-1.65478.75879,3.17334-23.19043,1.98144.27149-2.69922,19.72656c2.60743-.7666,5.02344-.43652,6.67823.96094a5.471,5.471,0,0,1,1.86035,4.49218,8.13264,8.13264,0,0,1-3.2002,6.07325C643.90266,386.88115,639.78694,386.99638,636.47981,387.08916Z" transform="translate(-223.06266 -98.08587)" fill="#2f2e41" />
+            <rect x="431.16715" y="256.92907" width="10.77148" height="2" fill="#2f2e41" />
+            <rect x="397.16715" y="256.92907" width="10.77148" height="2" fill="#2f2e41" />
+            <path d="M609.57212,445.34074a53.00636,53.00636,0,0,1,12.89014-5.93,8.56789,8.56789,0,0,1,.02-4.71,9.42609,9.42609,0,0,1,9.12988-6.63h13.04a9.45955,9.45955,0,0,1,9.15039,6.64,8.532,8.532,0,0,1,.01953,4.7,53.16732,53.16732,0,0,1,12.89014,5.93Z" transform="translate(-223.06266 -98.08587)" fill="#2f2e41" />
+            <path d="M700.52232,344.39072a11.57143,11.57143,0,0,0-3.52979-2.87,8.36739,8.36739,0,0,0-3.8501-.95,8.77158,8.77158,0,0,0-5.10986,1.72c-4.07031,2.88-6.89014,9.09-6.89014,16.28,0,9.02,4.43995,16.5,10.21,17.80005a8.25321,8.25321,0,0,0,1.79.2c6.60987,0,12-8.07,12-18C705.14243,352.81077,703.33238,347.68076,700.52232,344.39072Z" transform="translate(-223.06266 -98.08587)" fill="#3f3d56" />
+            <path d="M590.6024,341.86076h-.00977a8.57836,8.57836,0,0,0-4.4502-1.29,8.36738,8.36738,0,0,0-3.85009.95,11.57143,11.57143,0,0,0-3.52979,2.87l-.01025.01c-2.79981,3.29-4.60987,8.42-4.60987,14.17,0,7.76,3.27979,14.38,7.87989,16.91a8.54175,8.54175,0,0,0,4.12011,1.09,7.72431,7.72431,0,0,0,.96-.06h.00976c6.16016-.74,11.03027-8.5,11.03027-17.94C598.14243,351.01072,595.01255,344.52073,590.6024,341.86076Z" transform="translate(-223.06266 -98.08587)" fill="#3f3d56" />
+            <path d="M582.77242,373.76a1.50127,1.50127,0,0,0,1.42151-1.98,58.49864,58.49864,0,1,1,112.68726-6.5747,1.50006,1.50006,0,0,0,2.93554.61914A61.50091,61.50091,0,1,0,581.35116,372.739,1.50077,1.50077,0,0,0,582.77242,373.76Z" transform="translate(-223.06266 -98.08587)" fill="#3f3d56" />
+            <path d="M666.10324,329.57746c2.11924,2.89278,1.07447,6.79121-1.15837,9.28528-2.90548,3.24541-7.53877,3.45016-11.5618,2.8478-4.51431-.67591-9.3026-2.7909-13.87293-1.3656-3.89537,1.2148-6.67418,4.74793-10.7211,5.63537-3.589.787-7.88081-.25477-9.139-4.08016-.60459-1.83823,2.29142-2.6261,2.89284-.79751.81395,2.47478,4.32865,2.42543,6.34145,1.74012,3.22689-1.09867,5.71374-3.77105,8.8854-5.04749,3.73933-1.50491,7.79621-.82549,11.60323.03181,3.58831.808,7.718,2.006,11.29267.49665,2.64515-1.1169,4.74985-4.635,2.84717-7.23211-1.14219-1.5591,1.45985-3.05738,2.59042-1.51416Z" transform="translate(-223.06266 -98.08587)" fill="#2f2e41" />
+            <path d="M874.932,513.49157H684.63034a8.01411,8.01411,0,1,1,0-16.02823H874.932a8.01412,8.01412,0,0,1,0,16.02823Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <path d="M907.99023,540.5392H684.63034a8.01412,8.01412,0,1,1,0-16.02823H907.99023a8.01412,8.01412,0,1,1,0,16.02823Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <path d="M874.932,610.705H684.63034a8.01411,8.01411,0,1,1,0-16.02822H874.932a8.01411,8.01411,0,1,1,0,16.02822Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <path d="M907.99023,637.75267H684.63034a8.01411,8.01411,0,1,1,0-16.02823H907.99023a8.01411,8.01411,0,1,1,0,16.02823Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <circle cx="386.2497" cy="420.61448" r="34" fill="#e6e6e6" />
+            <circle cx="386.2497" cy="518.61448" r="34" fill="#e6e6e6" />
+            <path d="M874.932,708.705H684.63034a8.01411,8.01411,0,1,1,0-16.02822H874.932a8.01411,8.01411,0,1,1,0,16.02822Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <path d="M907.99023,735.75267H684.63034a8.01411,8.01411,0,1,1,0-16.02823H907.99023a8.01411,8.01411,0,1,1,0,16.02823Z" transform="translate(-223.06266 -98.08587)" fill="#e6e6e6" />
+            <circle cx="386.2497" cy="616.61448" r="34" fill="#e6e6e6" /></svg>
+        </div>
+      </div>
+      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="199" height="210" viewBox="0 0 471.64422 535.27925" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M667.40014,578.66468a5.85335,5.85335,0,0,0,8.19478-7.3327c.11916-.59306.20482-1.01884.32411-1.612a15.72575,15.72575,0,0,1,26.43575,12.29672c-.72482,17.64262.14665,36.67992-11.57959,50.90291,53.51961-43.734,77.92233-118.2368,61.57827-185.24539-8.0198-11.17512-11.761-26.02083-8.16445-39.47385,4.51311,4.38941,13.31085,3.21024,11.96647-4.38842-.72128-3.00309-1.46768-5.99712-2.18874-9.00021,30.82539-12.02859,38.87346,33.80585,2.35924,52.46738a187.6699,187.6699,0,0,1,4.84037,38.83077,78.90732,78.90732,0,0,1,20.02313-31.05739c8.75094-7.879,20.3222-12.51213,31.08707-17.79832,13.09908-6.44942,27.63689,6.33656,22.47934,19.98615-8.71986-1.11568-14.89006,9.307-6.97706,14.908-13.89815,23.34128-40.54715,38.177-67.62313,38.41262a188.40108,188.40108,0,0,1-24.59141,75.51612c17.29669-26.30123,50.77-18.72874,77.22357-19.84935a9.114,9.114,0,0,1,8.57482,14.314,52.64173,52.64173,0,0,0-10.42374.42381,7.95606,7.95606,0,0,0-2.913,14.70091c-23.20566,21.27359-59.16381,25.84652-87.38529,12.27172a193.68826,193.68826,0,0,1-28.089,28.68876l-41.957-20c.07173-.5379.16587-1.08375.25269-1.61446a52.80887,52.80887,0,0,0,11.9394,4.84236c-4.476-17.06309-9.46371-27.05742,4.61184-41.19017Z" transform="translate(-364.17789 -182.36037)" fill="#f2f2f2" />
+            <path d="M593.26174,538.30051a5.85334,5.85334,0,0,1-10.35535-3.69993c-.33407-.5043-.574-.86633-.90821-1.37062a15.72574,15.72574,0,0,0-19.84459,21.36c7.32613,16.066,13.7,34.0257,29.92495,42.77488C526.01581,577.04927,475.313,517.2547,465.17387,449.031c3.21209-13.3747,1.077-28.535-7.32832-39.63759-2.524,5.76753-11.11668,7.994-12.73784.44954-.46478-3.05332-.90287-6.10773-1.36785-9.161-33.08556.4874-23.25022,45.97183,17.6059,49.48155A187.67015,187.67015,0,0,0,471.51,487.95168a78.90719,78.90719,0,0,0-30.259-21.21042c-11.0765-3.99611-23.54062-3.92226-35.50427-4.75741-14.5642-1.032-23.20519,16.2932-13.28,26.98906,7.65489-4.32243,17.30079,3.00295,12.085,11.175,21.6759,16.37465,51.95244,20.06239,77.1172,10.06743a188.40088,188.40088,0,0,0,51.25978,60.66182c-25.93989-17.834-54.08421,1.80537-79.00634,10.74591a9.114,9.114,0,0,0-2.54213,16.491,52.6414,52.6414,0,0,1,9.81361-3.53937,7.95606,7.95606,0,0,1,8.243,12.51617c29.51594,10.94887,64.5428,1.62047,85.55912-21.5968a193.68792,193.68792,0,0,0,36.83557,15.97427l31.3136-34.3489c-.26933-.47111-.56241-.94112-.843-1.39989a52.80852,52.80852,0,0,1-9.23088,8.98824c-2.29093-17.491-1.44152-28.62844-19.80824-36.40786Z" transform="translate(-364.17789 -182.36037)" fill="#f2f2f2" />
+            <path d="M601.32052,393.15792a5.85335,5.85335,0,0,0,2.71449-10.65619c-.23174-.55876-.398-.96-.62969-1.51886a15.72575,15.72575,0,0,1,28.8015-4.53124c9.235,15.05,20.57265,30.36781,18.76825,48.7129,20.045-66.14534-1.23637-141.59909-52.165-188.11314-12.88827-4.8055-24.27123-15.04367-28.78634-28.21684,6.19385,1.12755,12.83978-4.75652,7.48711-10.31494-2.27313-2.09084-4.56208-4.16015-6.835-6.25112,18.88293-27.17217,51.119,6.38975,31.21174,42.24a187.67015,187.67015,0,0,1,25.66833,29.53634,78.90727,78.90727,0,0,1-.694-36.946c2.87158-11.4198,9.89418-21.71751,15.88324-32.10776,7.27823-12.65735,26.47552-10.14873,29.80436,4.058-7.86078,3.93559-7.17173,16.02814,2.52,16.26583,1.4765,27.12552-12.3743,54.29948-34.71987,69.59129a188.40091,188.40091,0,0,1,21.68969,76.40013c-.30555-31.47756,31.70416-43.8544,53.03958-59.53386a9.114,9.114,0,0,1,15.09909,7.10174,52.64111,52.64111,0,0,0-8.4169,6.16359,7.95606,7.95606,0,0,0,5.7783,13.828c-7.4029,30.59846-34.70366,54.44313-65.70016,58.909a193.68831,193.68831,0,0,1-7.32243,39.47682L608.53548,434.042c-.24036-.48654-.46655-.99215-.69037-1.48112a52.80911,52.80911,0,0,0,12.61126-2.637c-13.22923-11.66923-22.94211-17.185-19.13712-36.76506Z" transform="translate(-364.17789 -182.36037)" fill="#f2f2f2" />
+            <path d="M647.5666,378.41453c-20.9336,0-32.28809-2.55811-36.25342-8.01856-3.499-4.81787-1.15332-11.1748,1.563-18.53515,1.95215-5.29053,4.16455-11.28662,4.16455-17.22119,0-28.86426,14.63574-43.5,43.5-43.5,14.36133,0,29.78125,7.6289,41.24853,20.40771,10.42481,11.61719,15.61817,25.521,14.24854,38.146h0c-1.12354,10.354-5.94287,17.16308-15.167,21.42968l-.53955.24952-.15332-.57422a24.5432,24.5432,0,0,0-3.97412-8.24072,28.19811,28.19811,0,0,1-2.875,11.17334l-.09815.19873-.21289.061c-10.43994,2.97363-22.83008,3.7793-32.458,4.14844Q653.53072,378.41307,647.5666,378.41453Z" transform="translate(-364.17789 -182.36037)" fill="#2f2e41" />
+            <path d="M653.27212,418.63117a15.66635,15.66635,0,0,0-24.39185-7.36522l-68.8566,41.16735-21.54632-52.573a15.29692,15.29692,0,1,0-16.90148,6.07538c1.328,15.16031,8.70834,82.92118,34.38327,80.458,21.581-2.07043,75.17541-37.7632,91.82187-50.13882A15.668,15.668,0,0,0,653.27212,418.63117Z" transform="translate(-364.17789 -182.36037)" fill="#ffb6b6" />
+            <path d="M705.16071,717.63963h-59.93l-10.05-49.69-3.26,49.69h-55.67a1135.63224,1135.63224,0,0,1,6.09-116.83l.69-2.35,1.09-3.76.69-2.36,11.52-39.56.91-3.14h69.37a101.54508,101.54508,0,0,1,11.01,12.16c1.13,1.44,2.31,3,3.52,4.68.84,1.19,1.71,2.44,2.58,3.75a125.997,125.997,0,0,1,17.1,37.6v.01q.915,3.435,1.62,7.03v.01c.42,2.13.79,4.29,1.08,6.5.22,1.61.41,3.24.55,4.89a112.10334,112.10334,0,0,1-.87006,27.42Z" transform="translate(-364.17789 -182.36037)" fill="#2f2e41" />
+            <ellipse cx="385.51399" cy="258.37869" rx="7.55666" ry="5.25681" transform="translate(-431.45533 -25.76823) rotate(-21.16137)" fill="#e6e6e6" />
+            <ellipse cx="434.5175" cy="252.09254" rx="7.55666" ry="5.2568" transform="translate(-425.88162 -8.50206) rotate(-21.16137)" fill="#3f3d56" />
+            <ellipse cx="381.26407" cy="300.18686" rx="7.55666" ry="5.25681" transform="translate(-446.83449 -24.4832) rotate(-21.16137)" fill="#ff6584" />
+            <ellipse cx="367.88539" cy="318.88355" rx="3.3223" ry="4.77581" transform="translate(-427.73431 -89.0524) rotate(-13.31636)" fill="#e6e6e6" />
+            <ellipse cx="367.5938" cy="350.10614" rx="3.3223" ry="4.77581" transform="translate(-434.93358 -88.28009) rotate(-13.31636)" fill="#3f3d56" />
+            <ellipse cx="410.60279" cy="285.4369" rx="3.3223" ry="4.77581" transform="translate(-418.88208 -80.11268) rotate(-13.31636)" fill="#e6e6e6" />
+            <ellipse cx="384.79392" cy="279.16956" rx="3.3223" ry="4.77581" transform="translate(-418.13246 -86.22569) rotate(-13.31636)" fill="#ff6584" />
+            <ellipse cx="412.14945" cy="250.4188" rx="3.3223" ry="4.77581" transform="translate(-410.77486 -80.69797) rotate(-13.31636)" fill="#3f3d56" />
+            <ellipse cx="420.21763" cy="466.26555" rx="5.25681" ry="7.55666" transform="translate(-571.39218 301.67047) rotate(-49.59538)" fill="#e6e6e6" />
+            <ellipse cx="391.35696" cy="426.16665" rx="5.2568" ry="7.55666" transform="translate(-551.01114 265.58593) rotate(-49.59538)" fill="#3f3d56" />
+            <ellipse cx="459.0059" cy="450.09598" rx="5.25681" ry="7.55666" transform="translate(-545.43283 325.51844) rotate(-49.59538)" fill="#ff6584" />
+            <ellipse cx="481.81734" cy="452.95837" rx="4.77581" ry="3.3223" transform="translate(-543.44071 253.50273) rotate(-41.75038)" fill="#e6e6e6" />
+            <ellipse cx="509.41227" cy="438.34826" rx="4.77581" ry="3.3223" transform="translate(-526.70439 268.16763) rotate(-41.75038)" fill="#3f3d56" />
+            <ellipse cx="432.06576" cy="431.31964" rx="4.77581" ry="3.3223" transform="translate(-541.66604 214.87873) rotate(-41.75038)" fill="#e6e6e6" />
+            <ellipse cx="438.84328" cy="456.99926" rx="4.77581" ry="3.3223" transform="translate(-557.04462 225.91305) rotate(-41.75038)" fill="#ff6584" />
+            <ellipse cx="400.5356" cy="446.63329" rx="4.77581" ry="3.3223" transform="translate(-559.87018 197.77208) rotate(-41.75038)" fill="#3f3d56" />
+            <ellipse cx="616.52346" cy="207.20233" rx="5.25681" ry="7.55666" transform="translate(-392.33437 110.99155) rotate(-26.18799)" fill="#e6e6e6" />
+            <ellipse cx="627.07905" cy="255.46659" rx="5.2568" ry="7.55666" transform="translate(-412.55073 120.60421) rotate(-26.18799)" fill="#3f3d56" />
+            <ellipse cx="574.50371" cy="206.63192" rx="5.25681" ry="7.55666" transform="translate(-396.39593 92.38894) rotate(-26.18799)" fill="#ff6584" />
+            <ellipse cx="554.7067" cy="194.94288" rx="4.77581" ry="3.3223" transform="translate(-397.34247 2.11352) rotate(-18.34298)" fill="#e6e6e6" />
+            <ellipse cx="523.57864" cy="197.38809" rx="4.77581" ry="3.3223" transform="translate(-399.69362 -7.55838) rotate(-18.34298)" fill="#3f3d56" />
+            <ellipse cx="591.76756" cy="234.56544" rx="4.77581" ry="3.3223" transform="translate(-407.9288 15.78998) rotate(-18.34298)" fill="#e6e6e6" />
+            <ellipse cx="595.74946" cy="208.30669" rx="4.77581" ry="3.3223" transform="translate(-399.46273 15.70889) rotate(-18.34298)" fill="#ff6584" />
+            <ellipse cx="626.7865" cy="233.03792" rx="4.77581" ry="3.3223" transform="translate(-405.66876 26.73299) rotate(-18.34298)" fill="#3f3d56" />
+            <path d="M637.44226,386.45014l33.016-1.70078,15.335,24.23122s28.85327,4.82389,26.85327,38.82389-35.10581,63.83516-35.10581,63.83516l1.41517,17.7057-2.4578,7.02278.31518,3.94331,3.3529,4.17612.3452,4.31886-2.97065,6.83323,4.03976,6.5428-84.93395-8.22878-3.10581-11.314,4.53071-6.07552-2.53071-7.92448,3.80459-7.62205,1.98386-24.21106s-21.70416-32.60744,3.21155-57.16689l10-17,11.18914-13.65128Z" transform="translate(-364.17789 -182.36037)" fill="#d53369" />
+            <circle cx="289.67779" cy="162.26351" r="34.98425" fill="#ffb6b6" />
+            <path d="M649.17158,342.5034q-4.522,0-9.03906-.25489l-.53809-.03027.0708-.53418a24.50407,24.50407,0,0,0-.7334-9.97266,28.2031,28.2031,0,0,1-6.873,9.707l-.167.15283-.22461-.02442A172.65893,172.65893,0,0,1,607.4167,337.124l-.30518-.07812-.061-.3086a45.78284,45.78284,0,0,1-.91993-8.87793c0-9.31591,3.37744-17.15674,9.51075-22.07812,6.67529-5.35694,16.24462-7.0044,26.9541-4.6416h34.24511a14.21619,14.21619,0,0,1,14.2002,14.20019v21.686l-.37354.09765A163.81194,163.81194,0,0,1,649.17158,342.5034Z" transform="translate(-364.17789 -182.36037)" fill="#2f2e41" />
+            <path d="M410.45832,303.58938a6.16369,6.16369,0,0,0-3.6763,7.89285l36.94327,101.36884a6.1637,6.1637,0,0,0,7.89272,3.67659l143.38306-52.25511a6.16369,6.16369,0,0,0,3.6763-7.89285L561.7341,255.01086a6.1637,6.1637,0,0,0-7.89272-3.67659Z" transform="translate(-364.17789 -182.36037)" fill="#ccc" />
+            <path d="M541.63689,378.13237l-87.76521,31.98551a6.63382,6.63382,0,0,1-8.4948-3.957l-33.50723-91.94065a6.63382,6.63382,0,0,1,3.95675-8.49494L551.10723,256.423a6.634,6.634,0,0,1,8.495,3.957l16.19036,44.42481A57.2643,57.2643,0,0,1,541.63689,378.13237Z" transform="translate(-364.17789 -182.36037)" fill="#fff" />
+            <path d="M478.48515,311.71291l-20.856,7.60085a2.1198,2.1198,0,1,1-1.45169-3.98332l20.856-7.60085a2.1198,2.1198,0,0,1,1.4517,3.98332Z" transform="translate(-364.17789 -182.36037)" fill="#d53369" />
+            <path d="M528.20617,302.82027l-67.60829,24.63945a2.11981,2.11981,0,1,1-1.4517-3.98333l67.6083-24.63944a2.1198,2.1198,0,0,1,1.45169,3.98332Z" transform="translate(-364.17789 -182.36037)" fill="#d53369" />
+            <path d="M531.61389,312.17073,464.0056,336.81017a2.1198,2.1198,0,1,1-1.4517-3.98332l67.60829-24.63945a2.11981,2.11981,0,0,1,1.4517,3.98333Z" transform="translate(-364.17789 -182.36037)" fill="#d53369" />
+            <path d="M535.02161,321.52118l-67.60829,24.63945a2.11981,2.11981,0,1,1-1.4517-3.98333l67.60829-24.63944a2.1198,2.1198,0,0,1,1.4517,3.98332Z" transform="translate(-364.17789 -182.36037)" fill="#d53369" />
+            <path d="M538.42933,330.87164,470.821,355.51108a2.1198,2.1198,0,1,1-1.4517-3.98332l67.60829-24.63944a2.1198,2.1198,0,0,1,1.4517,3.98332Z" transform="translate(-364.17789 -182.36037)" fill="#d53369" />
+            <path d="M752.95063,356.83987l-37.01617,88.58a15.49581,15.49581,0,0,1-20.07063,8.35608l0,0a15.49584,15.49584,0,0,1-8.25517-20.918l41.27157-90.83415,22.75148-56.25137a13.52234,13.52234,0,1,1,17.28849,1.51415Z" transform="translate(-364.17789 -182.36037)" fill="#ffb6b6" /></svg>
+        </div>
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <div class="align-middle">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Start receiving relevant jobs
+            </h3>
+            <p class="text-gray-600 mb-8">
+              The worst part of the job finding process is the jobs you receive where you are no fit. This is where we step in. We make sure that the Job Seeker received only relavent interview requests & the Recruiters only get the resumes of people who actually fit the job.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white border-b py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        For Candidates
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              CREATE YOUR FREE ACCOUNT
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 pb-4">
+              It all starts with an account
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Once your account is created, which is <b>FREE</b> by the way, your profile is shared with recuiters who have posted jobs which match your profile & experience
+            </p>
+          </a>
+        </div>
+        <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex items-center justify-start">
+            <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Action
+            </button>
+          </div>
+        </div> -->
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              BROWSE AVAILABLE JOBS
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 pb-4">
+              Explore the platform
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              You can either wait for the recruiters to find you, or you can go ahead & browse the available jobs, relevant to you. With every job, there will be the <b>CTC, years of experience etc</b> displayed
+            </p>
+          </a>
+        </div>
+        <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex items-center justify-center">
+            <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Action
+            </button>
+          </div>
+        </div> -->
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              OPERATE IN STEALTH MODE
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 pb-4">
+              Your privacy is respected here
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Once you create your profile, you can specify the companies you don't want your information to be shared with & your wish will be our command
+            </p>
+          </a>
+        </div>
+        <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex items-center justify-end">
+            <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Action
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section class="bg-white border-b py-8">
+    <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        For Recruiters
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              POST A JOB
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 pb-4">
+              It all actually starts with a job post
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Select a plan which best suits your needs, you can post a job. Along with the job description, we ask for some other information as well so as to smartly match only the relevant candidates with the job
+            </p>
+          </a>
+        </div>
+        <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex items-center justify-start">
+            <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Action
+            </button>
+          </div>
+        </div> -->
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              START GETTING APPLICAIONS
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 pb-4">
+              Let them come to you
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Once the Job Post is live, applications will start flowing, again, only the relevant ones, with the <b>experience you desire & within your budget</b> 
+            </p>
+          </a>
+        </div>
+        <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex items-center justify-center">
+            <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Action
+            </button>
+          </div>
+        </div> -->
+      </div>
+      <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+            <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              SHORTLIST CANDIDATES
+            </p>
+            <div class="w-full font-bold text-xl text-gray-800 px-6 pb-4">
+              Let the interviews begin!
+            </div>
+            <p class="text-gray-800 text-base px-6 mb-5">
+              Once you have the influx of applications, shortlist the ones you think satisfy the job description & get on with the interviews
+            </p>
+          </a>
+        </div>
+        <!-- <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex items-center justify-end">
+            <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Action
+            </button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-100 py-8">
+    <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Pricing
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+        <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
+          <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+            <div class="p-8 text-3xl font-bold text-center border-b-4">
+              Basic
+            </div>
+            <ul class="w-full text-center text-sm">
+              <li class="border-b py-4">Post 1 Job</li>
+              <li class="border-b py-4">Get upto 25 Applicants</li>
+              <li class="border-b py-4">Job Post expires after 1 month</li>
+              <li class="border-b py-4">Access to candidates who apply to the job</li>
+            </ul>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+              Free
+            </div>
+            <div class="flex items-center justify-center">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-0 shadow-lg z-10">
+          <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+            <div class="p-8 text-3xl font-bold text-center border-b-4">
+              Premium
+            </div>
+            <ul class="w-full text-center text-sm font-semibold">
+              <li class="border-b py-4">Post upto 10 Jobs</li>
+              <li class="border-b py-4">Get upto 100 applicants per job</li>
+              <li class="border-b py-4">Job Post expires after 3 month</li>
+              <li class="border-b py-4">Plus Smart Candidate Suggestions</li>
+            </ul>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+              2500
+              <span class="text-base">/ per mmonth</span>
+            </div>
+            <div class="flex items-center justify-center">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            <div class="w-full p-8 text-3xl font-bold text-center">Pro</div>
+            <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
+            <ul class="w-full text-center text-base font-bold">
+              <li class="border-b py-4">Post Unlimited Jobs</li>
+              <li class="border-b py-4">Get unlimited applicants per job</li>
+              <li class="border-b py-4">Job Post never expires</li>
+              <li class="border-b py-4">Plus Access to the Candidate Pool</li>
+            </ul>
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="w-full pt-6 text-4xl font-bold text-center">
+              7500
+              <span class="text-base">/ per month</span>
+            </div>
+            <div class="flex items-center justify-center">
+              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Change the colour #f8fafc to match the previous section colour -->
+  <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+        <g class="wave" fill="#f8fafc">
+          <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
+        </g>
+        <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+          <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
+            <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
+            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <section class="container mx-auto text-center py-6 mb-12">
+    <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+      Hiring should be simple!
+    </h1>
+    <div class="w-full mb-4">
+      <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+    </div>
+    <h3 class="my-4 text-3xl leading-tight">
+      Let us take the complexity out of hiring & give you the best experience
+    </h3>
+    <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      Start Now
+    </button>
+  </section>
+  <!--Footer-->
+  <footer class="bg-white">
+    <div class="container mx-auto px-8">
+      <div class="w-full flex flex-col md:flex-row py-6">
+        <div class="flex-1 mb-6 text-black">
+          <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            conscriber
+          </a>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Links</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Social</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <p class="uppercase text-gray-500 md:mb-6">Company</p>
+          <ul class="list-reset mb-6">
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+            </li>
+            <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+              <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+  <script>
+  var scrollpos = window.scrollY;
+  var header = document.getElementById("header");
+  var navcontent = document.getElementById("nav-content");
+  var navaction = document.getElementById("navAction");
+  var brandname = document.getElementById("brandname");
+  var toToggle = document.querySelectorAll(".toggleColour");
+
+  document.addEventListener("scroll", function() {
+    /*Apply classes for slide in bar*/
+    scrollpos = window.scrollY;
+
+    if (scrollpos > 10) {
+      header.classList.add("bg-white");
+      navaction.classList.remove("bg-white");
+      navaction.classList.add("gradient");
+      navaction.classList.remove("text-gray-800");
+      navaction.classList.add("text-white");
+      //Use to switch toggleColour colours
+      for (var i = 0; i < toToggle.length; i++) {
+        toToggle[i].classList.add("text-gray-800");
+        toToggle[i].classList.remove("text-white");
+      }
+      header.classList.add("shadow");
+      navcontent.classList.remove("bg-gray-100");
+      navcontent.classList.add("bg-white");
+    } else {
+      header.classList.remove("bg-white");
+      navaction.classList.remove("gradient");
+      navaction.classList.add("bg-white");
+      navaction.classList.remove("text-white");
+      navaction.classList.add("text-gray-800");
+      //Use to switch toggleColour colours
+      for (var i = 0; i < toToggle.length; i++) {
+        toToggle[i].classList.add("text-white");
+        toToggle[i].classList.remove("text-gray-800");
+      }
+
+      header.classList.remove("shadow");
+      navcontent.classList.remove("bg-white");
+      navcontent.classList.add("bg-gray-100");
+    }
+  });
+  </script>
+  <script>
+  /*Toggle dropdown list*/
+  /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+  var navMenuDiv = document.getElementById("nav-content");
+  var navMenu = document.getElementById("nav-toggle");
+
+  document.onclick = check;
+
+  function check(e) {
+    var target = (e && e.target) || (event && event.srcElement);
+
+    //Nav Menu
+    if (!checkParent(target, navMenuDiv)) {
+      // click NOT on the menu
+      if (checkParent(target, navMenu)) {
+        // click on the link
+        if (navMenuDiv.classList.contains("hidden")) {
+          navMenuDiv.classList.remove("hidden");
+        } else {
+          navMenuDiv.classList.add("hidden");
+        }
+      } else {
+        // click both outside link and outside menu, hide menu
+        navMenuDiv.classList.add("hidden");
+      }
+    }
+  }
+
+  function checkParent(t, elm) {
+    while (t.parentNode) {
+      if (t == elm) {
+        return true;
+      }
+      t = t.parentNode;
+    }
+    return false;
+  }
+  </script>
+</body>
+
+</html>
